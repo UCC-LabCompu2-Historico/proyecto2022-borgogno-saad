@@ -1,0 +1,495 @@
+/*
+----------Proyecto Borgogno-Saad-------------
+Todo el CCS esta en el siguiente orden:
+1) Base CSS
+2) Barra de navegacion
+3) Slider de la seccion HOME
+4) Seccion Menus
+5) Seccion Formulario
+6) Footer
+7) Canvas
+
+*/
+
+/*------------------------------
+    1.BASE CSS
+------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Lato:400,700|PT+Sans+Narrow:400,700');
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 700;
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    color: #555555;
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    line-height: 1.7em;
+}
+
+.area-title {
+    margin-bottom: 60px;
+}
+
+.area-title h2 {
+    color: #ca3d26;
+
+    font-family: "Dancing Script", cursive;
+    font-size: 60px;
+    letter-spacing: 2px;
+    line-height: 0.8;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+/*END BASE CSS*/
+
+/*-------------------------------
+    2.BARRA DE NAVEGACION
+-------------------------------*/
+
+body {
+    height: 100%;
+}
+
+.navbar {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    position: fixed;
+    font-weight: bold;
+
+}
+
+.navbackground {
+    position: absolute;
+    height: 8%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+    margin: 0 0 0 0;
+    position: fixed;
+}
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+.nav li {
+    float: left;
+}
+
+.nav li a:hover {
+    color: #ca3d26;
+}
+
+.nav li a {
+    display: block;
+    color: rgb(114, 112, 112);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/*END BARRA DE NAVEGACION*/
+
+/*--------------------------
+    2.SLIDE AREA
+-----------------------------*/
+
+@keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+    }
+    
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.fade {
+    position: absolute;
+    background-color: #1a1a1a;
+    opacity: 73%;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background-image: url("../img/pattarn.png");
+    background-repeat: repeat;
+}
+
+div#slider figure img {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+div#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 30s slidy infinite;
+    z-index: 2;
+}
+
+.pogoSlider {
+    z-index: 4;
+    color: rgb(255, 255, 255);
+    width: 500%;
+    top: 25%;
+    text-align: center;
+    animation: 30s slidy infinite;
+    overflow: hidden;
+    position: absolute;
+}
+
+.pogoSlider a {
+    color: #ccc;
+}
+
+.pogoSlider-slide {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+div#slider {
+    overflow: hidden;
+}
+
+.slider-area h1 {
+    font-size: 65px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.slider-area h1 span {
+    font-weight: 700;
+}
+
+.slider-area h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 82px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.slider-area h3 {
+    font-family: lato;
+    font-weight: 700;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+.slider-area h3 a,
+a.home-reservation-button {
+    border: 1px solid;
+    color: #fff;
+    display: inline-block;
+    font-size: 13px;
+    margin-top: 15px;
+    padding: 10px 30px;
+}
+
+.slider-area h3 a:hover,
+a.home-reservation-button:hover {
+    color: #fff;
+    background: #ca3d26 none repeat scroll 0 0;
+    border-color: #ca3d26;
+}
+
+/*END SLIDE AREA*/
+
+/*------------------------------
+    4.SECCION MENUS
+------------------------------*/
+
+.menus-area {
+    position: relative;
+    width: 100%;
+    z-index: -1;
+    padding-top: 4%;
+}
+
+.food-img-1 img {
+    transition: all 500ms;
+}
+
+.food-img-1:hover img {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 5px #ca3d26
+}
+
+.food-menu-img {
+    border-radius: 50%;
+    height: 100px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 10%;
+    box-shadow: 0 0 0 10px #ddd;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+
+.menu-list-1 .dish-name {
+    padding: 6px 0 0 10px;
+    overflow: hidden;
+}
+
+.dishs-price {
+    color: #ca3d26;
+    font-weight: 600;
+    font-size: 1.2857142857142858em;
+}
+
+.menu-list-1 {
+    margin-bottom: 40px;
+    min-height: 110px;
+    padding-bottom: 40px;
+    border-bottom: 1px dashed #ccc;
+    column-count: 2;
+    margin: 6px 80px;
+}
+
+.food-list {
+    padding-top: 30px;
+    background-color: #fff;
+    column-count: 2;
+    column-gap: 1%;
+    padding-left: 11%;
+}
+
+.mon-1 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+/*FIN AREA DE MENUS*/
+
+/*--------------------------------- 
+    5. SECCION FORMULARIO 
+----------------------------------- */
+.form {
+    height: 100%;
+    padding-top: 2%;
+}
+
+.form_wrap {
+    width: 1050px;
+    height: 530px;
+    margin: 50px auto;
+    display: flex;
+    z-index: -5;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Informacion de Contacto*/
+
+.cantact_info::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: #ca3d26;
+    opacity: 100;
+}
+
+.cantact_info {
+    width: 38%;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info_title {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    margin-bottom: 60px;
+}
+
+.info_title h2 {
+    font-size: 35px;
+    text-align: center;
+}
+
+
+/* Formulario de contacto*/
+form.form_reserva {
+    width: 62%;
+    padding: 30px 40px;
+}
+
+form.form_reserva h2 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #303030;
+    margin-bottom: 30px;
+}
+
+form.form_reserva .user_info {
+    display: block;
+}
+
+.columnas-form {
+    column-count: 2;
+
+}
+
+form.form_reserva label {
+    font-weight: 600;
+}
+
+form.form_reserva input,
+form.form_reserva option {
+    width: 100%;
+    padding: 8px 0px 5px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid #D1D1D1;
+    font-family: 'Open sans';
+    color: #5A5A5A;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+form.form_reserva option {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 90px;
+}
+
+form.form_reserva input[type="radio"] {
+    width: 3%;
+}
+
+form.form_reserva button {
+    width: 180px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid;
+    border-color: #ca3d26;
+    align-self: flex-end;
+    color: #ca3d26;
+    font-family: 'Open sans';
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+form.form_reserva button:hover {
+    transform: scale(1.1);
+    background: #ca3d26;
+    color: #fff;
+}
+
+/*formulario para js*/
+.formparajs {
+    width: 300px;
+    height: 510px;
+    position: absolute;
+    margin: 7% 14%;
+    z-index: 1;
+    background-color: #ca3d26;
+    text-align: center;
+    color: #000000;
+    display: none;
+}
+
+
+/*------------------------------
+    6. SECCION FOOTER
+-------------------------------*/
+
+.footer-area {
+    background: #191a1b;
+    color: #cacaca;
+    letter-spacing: 1px;
+    position: relative;
+    height: 40%;
+}
+
+.footer-content {
+    padding-top: 3%;
+}
+
+.footer-area a {
+    color: #ca3d26;
+}
+
+.footer-area a:hover {
+    color: #fff;
+}
+
+.footer-logo,
+.footer-address {
+    text-align: center;
+
+}
+
+/*----------------------------------
+    7. CANVAS
+-----------------------------------*/
+
+#canvas {
+    visibility: hidden;
+    display: none;
+}

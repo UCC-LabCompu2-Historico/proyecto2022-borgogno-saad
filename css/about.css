@@ -1,0 +1,140 @@
+/*
+----------Proyecto Borgogno-Saad-------------
+Todo el CCS esta en el siguiente orden:
+1) SECCION SOBRE NOSOTROS
+2) SECCION EQUIPO
+*/
+
+/* -------------------------------------
+    1.SECCION SOBRE NOSOTROS
+--------------------------------------*/
+
+.about-area {
+    background: rgba(0, 0, 0, 0) url("../img/about/home_three_about_bg.png") no-repeat scroll center bottom / contain;
+    position: relative;
+    height: 69%;
+}
+
+.about-author-sign {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.big-text {
+    float: left;
+    font-size: 80px;
+    font-weight: 700;
+    margin-bottom: -4px;
+    margin-right: 10px;
+    line-height: 1;
+}
+
+.about-area .area-title h2 {
+    font-size: 80px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.about-parrafo {
+    column-count: 2;
+    column-gap: 30px;
+    margin: 40px 100px;
+}
+
+
+/*FIN SECCION SOBRE NOSOTROS*/
+
+/* -------------------------------------
+    2.SECCION EQUIPO
+--------------------------------------*/
+
+.about-equipo {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    font-family: tahoma;
+}
+
+.team {
+    align-items: center;
+}
+
+.col-12 {
+    margin-left: 9.75%;
+    float: left;
+    display: block;
+}
+
+.our-team {
+    width: 140%;
+    padding: 30px 0 40px;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.our-team .picture {
+    display: inline-block;
+    height: 130px;
+    width: 130px;
+    margin-bottom: 50px;
+    z-index: 1;
+    position: relative;
+}
+
+.our-team .picture::before {
+    content: "";
+    width: 100%;
+    height: 0;
+    border-radius: 50%;
+    background-color: #ca3d26;
+    position: absolute;
+    bottom: 135%;
+    right: 0;
+    left: 0;
+    opacity: 0.9;
+    transform: scale(3);
+    transition: all 0.3s linear 0s;
+}
+
+.our-team:hover .picture::before {
+    height: 100%;
+}
+
+.our-team .picture::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #ca3d26;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.our-team .picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.9s ease 0s;
+}
+
+.our-team:hover .picture img {
+    box-shadow: 0 0 0 14px #f7f5ec;
+    transform: scale(0.7);
+}
+
+.our-team .title {
+    display: block;
+    font-size: 15px;
+    color: #4e5052;
+    text-transform: capitalize;
+}
+
+/*FIN SECCION EQUIPO*/
